@@ -1,9 +1,3 @@
-.btn-success{
-    width: 80px;
-}
-.btn-danger{
-    width: 80px;
-}
 
 .backgroundImage {
     background-image: url("../../assets/image/hannah-busing-Zyx1bK9mqmA-unsplash.jpg");
@@ -18,4 +12,19 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+  }
+  .navbar{
+    height: 80px;
+    .navbar-nav{
+        height: 80px;
+    }
+    img{
+width: 200px;
+height: 200px;
+    }
+}
+  .citation{
+    margin-top: 20vh;
+    background-color: rgba(0, 0, 0, 0.8);   
+   
   }

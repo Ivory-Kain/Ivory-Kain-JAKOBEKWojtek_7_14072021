@@ -18,13 +18,24 @@
   }
   .logCardTop{      
       width: 60%;
-      height: 50px;
+      height: 65px;
       object-fit: cover;
   }
   .logCard {
-    margin-top: 50vh; 
+    margin-top: 40vh; 
     transform: translateY(-50%);
   }
-
+  .navbar{
+    height: 80px;
+    .navbar-nav{
+        height: 80px;
+    }
+    img{
+      width: 200px;
+      height: 40px;
+      object-fit: cover;
+          }
+          
+}
   
 

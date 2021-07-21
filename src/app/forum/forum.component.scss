@@ -1,0 +1,19 @@
+.navbar{
+    height: 80px;
+    .navbar-nav{
+        height: 80px;
+        a{
+            border-bottom: transparent 2px solid;
+       
+       &.active {
+           border-bottom: black 2px solid;
+       }
+   }    
+    }
+    img{
+      width: 200px;
+      height: 40px;
+      object-fit: cover;
+    }
+    
+}

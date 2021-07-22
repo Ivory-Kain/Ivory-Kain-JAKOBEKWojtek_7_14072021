@@ -73,6 +73,12 @@
         </div>
         <div class="col-md-6">
           <div class="inputs">
+            <label>Ville</label>
+            <input class="form-control" type="text" placeholder="Ville" />
+          </div>
+        </div>
+        <div class="col-md-12 d-flex justify-content-between">
+          <div class="inputs">
             <label>Date de naissance</label>
             <input
               type="date"
@@ -83,18 +89,23 @@
               value="2021-08-01"
             />
           </div>
+          <div class="mt-3 gap-2">
+            <button
+              class="cancelButtons px-3 btn btn-sm btn-outline-warning m-2"
+            >
+              Cancel
+            </button>
+            <button class="saveButtons px-3 btn btn-sm btn-warning m-2">
+              Save
+            </button>
+          </div>
         </div>
-      </div>
-
-      <div class="mt-3 gap-2 d-flex justify-content-end">
-        <button class="px-3 btn btn-sm btn-outline-warning">Cancel</button>
-        <button class="px-3 btn btn-sm btn-warning">Save</button>
       </div>
     </div>
   </div>
 </main>
 <footer class="bg-warning text-center text-white fixed-bottom">
-  <div class="container p-4">
+  <div class="topFooter container p-4">
     <section class="">
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -138,7 +149,7 @@
   </div>
 
   <div
-    class="text-center p-3 text-dark fw-bold"
+    class="botFooter text-center p-3 text-dark fw-bold"
     style="background-color: rgba(0, 0, 0, 0.2)"
   >
     <div class="allRights">

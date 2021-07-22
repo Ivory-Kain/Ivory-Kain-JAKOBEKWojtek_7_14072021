@@ -1,67 +1,91 @@
+<div class="backgroundImage"></div>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" [routerLink]="['']">Accueil</a>
-          <a class="nav-link active" aria-current="page" href="#">Forum</a>
-          <a class="nav-link" [routerLink]="['/profile']">Profile</a>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
+    <div class="container-fluid bg-warning">
+      <div class="navbar-nav col-4 justify-content-start">
+        <a class="nav-link p-0" [routerLink]="['']"
+          ><img
+            src="assets/image/logo.png"
+            title="Groupomania"
+            alt="Groupomania"
+        /></a>
+      </div>
+      <div class="navbar-nav col-8 justify-content-end align-items-center">
+        <a class="nav-link active text-dark fw-bold" [routerLink]="['/forum']"
+          >Forum</a
+        >
+        <a class="nav-link text-dark fw-bold" [routerLink]="['/profile']"
+          >Profile</a
+        >
       </div>
     </div>
   </nav>
 </header>
 <main>
-  <div class="container col-8">
-    <div class="card mb-3">
-      <div class="ratio ratio-16x9">
-        <img src="assets/image/tenor.gif" class="card-img-top" alt="image" />
-      </div>
+  <div class="container">
+    <div class="row">
+      <aside class="col-3">
+        <div class="cardProfile col-3">
+          <img src="assets/image/pp.jpg" alt="Profile" class="col-12 mb-4" />
+          <br />
+          <h3><b>Wojtek JAKOBEK</b></h3>
+          <p class="title">Dev Web</p>
+          <i class="far fa-bell fa-2x mb-4"></i>
+        </div>
+      </aside>
+      <div class="col-9">
+        <div class="containerCard col-12">
+          <div class="card mb-3 mt-3">
+            <div class="ratio ratio-16x9">
+              <img
+                src="assets/image/tenor.gif"
+                class="card-img-top"
+                alt="image"
+              />
+            </div>
 
-      <div class="card-body">
-        <h5 class="card-title">Mon Poste</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-          fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
-          accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut
-          molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
-          officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum
-          nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque
-          error repudiandae fuga? Ipsa laudantium molestias eos sapiente
-          officiis modi at sunt excepturi expedita sint? Sed quibusdam
-          recusandae alias error harum maxime adipisci amet laborum.
-        </p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-between">
-          <p class="card-text m-0">
-            <small class="text-muted">Poste crée le .. / .. / ..</small>
-          </p>
-          <button type="button" class="btn btn-secondary btn-sm">J'aime</button>
+            <div class="card-body">
+              <h5 class="card-title">Mon Poste</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi repudiandae
+                consequuntur voluptatum laborum numquam blanditiis harum
+                quisquam eius sed odit fugiat iusto fuga praesentium optio,
+                eaque rerum! Provident similique accusantium nemo autem.
+                Veritatis obcaecati tenetur iure eius earum ut molestias
+                architecto voluptate aliquam nihil, eveniet aliquid culpa
+                officia aut! Impedit sit sunt quaerat, odit, tenetur error,
+                harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia.
+                Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
+                sapiente officiis modi at sunt excepturi expedita sint? Sed
+                quibusdam recusandae alias error harum maxime adipisci amet
+                laborum.
+              </p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-between">
+                <p class="card-text m-0">
+                  <small class="text-white"
+                    >Poste crée le .. / .. / .. <span>par :</span></small
+                  >
+                </p>
+                <button type="button" class="btn btn-warning btn-sm fw-bold">
+                  J'aime
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </main>
-<footer class="bg-secondary text-center text-white fixed-bottom">
-  <div class="container p-4">
-    <section class="">
+<footer class="bg-warning text-center text-white">
+  <div class="topFooter container p-4">
+    <section>
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-white text-decoration-none"
+              <a href="#!" class="text-dark fw-bold text-decoration-none"
                 >Politique de confidentialité</a
               >
             </li>
@@ -70,7 +94,7 @@
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-white text-decoration-none"
+              <a href="#!" class="text-dark fw-bold text-decoration-none"
                 >Termes et conditions</a
               >
             </li>
@@ -79,14 +103,16 @@
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-white text-decoration-none">A propos</a>
+              <a href="#!" class="text-dark fw-bold text-decoration-none"
+                >A propos</a
+              >
             </li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-white text-decoration-none"
+              <a href="#!" class="text-dark fw-bold text-decoration-none"
                 >Nous contacter</a
               >
             </li>
@@ -96,7 +122,10 @@
     </section>
   </div>
 
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+  <div
+    class="botFooter text-center p-3 text-dark fw-bold"
+    style="background-color: rgba(0, 0, 0, 0.2)"
+  >
     <div class="allRights">
       <p>@ 2021 All Rights Reserved Groupomania</p>
     </div>

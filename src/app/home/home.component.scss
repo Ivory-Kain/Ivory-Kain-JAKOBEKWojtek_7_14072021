@@ -1,4 +1,3 @@
-
 .backgroundImage {
     background-image: url("../../assets/image/hannah-busing-Zyx1bK9mqmA-unsplash.jpg");
     background-size: cover;
@@ -13,24 +12,67 @@
     height: 100%;
     z-index: -1;
   }
-  .navbar{
-    height: 80px;
-    .navbar-nav{
-        height: 80px;
+
+  header {
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+  
+    .navbar {
+      height: 90px;
+  
+      .navbar-nav {
+        height: 90px;
+      }
+  
+      .nav-link {
+        height: 40px;
+  
+        img {
+          height: 90px;
+        }
+      }
     }
-    img{
-width: 200px;
-height: 200px;
-    }
-}
-  .citation{
-    margin-top: 20vh;
-    background-color: rgba(0, 0, 0, 0.8);   
-   
   }
-  .topFooter{
-    height:40px
-}
-.botFooter{
-    height: 40px;
-}
+  
+  main {
+    padding-top: 90px;
+    padding-bottom: 90px; 
+        .citation{
+        margin-top: 20vh;
+         background-color: rgba(0, 0, 0, 0.8); }}  
+   
+    footer {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+      .topFooter {
+        height: 45px;
+      
+        li {
+          height: 22px;
+        }
+      }
+      
+      .botFooter {
+        height: 45px;
+      
+        li {
+          height: 22px;
+        }
+      }
+    
+    }
+  
+    
+    
+    
+    
+    
+    
+    
+    

@@ -8,6 +8,8 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { ForumComponent } from './forum/forum.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
+import { TopicComponent } from './topic/topic.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ProfileComponent } from './profile/profile.component';
     SignupComponent,
     ForumComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    TopicComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

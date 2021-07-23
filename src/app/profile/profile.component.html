@@ -2,36 +2,22 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
     <div class="container-fluid bg-warning">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav col-4 justify-content-start align-items-center">
-          <a class="nav-link" [routerLink]="['']"
-            ><img
-              src="assets/image/logImageBlack.png"
-              title="Groupomania"
-              alt="Groupomania"
-          /></a>
-        </div>
-        <div class="navbar-nav col-8 justify-content-end align-items-center">
-          <a class="nav-link text-dark fw-bold" [routerLink]="['/forum']"
-            >Forum</a
-          >
-          <a
-            class="nav-link active text-dark fw-bold"
-            [routerLink]="['/profile']"
-            >Profile</a
-          >
-        </div>
+      <div class="navbar-nav col-4 justify-content-start">
+        <a class="nav-link p-0" [routerLink]="['']"
+          ><img
+            src="assets/image/logo.png"
+            title="Groupomania"
+            alt="Groupomania"
+        /></a>
+      </div>
+      <div class="navbar-nav col-8 justify-content-end align-items-center">
+        <i class="far fa-bell fa-2x col-2 row justify-content-center"></i>
+        <a class="nav-link text-dark fw-bold" [routerLink]="['/forum']"
+          >Forum</a
+        >
+        <a class="nav-link active text-dark fw-bold" [routerLink]="['/profile']"
+          >Profile</a
+        >
       </div>
     </div>
   </nav>
@@ -51,7 +37,7 @@
           <span>Dev Web</span>
         </div>
       </div>
-      <h4 class="text-white">Votre Profile</h4>
+      <h4 class="text-white mt-4">Votre Profile</h4>
       <div class="row text-white">
         <div class="col-md-6">
           <div class="inputs">
@@ -100,13 +86,49 @@
             </button>
           </div>
         </div>
+        <div class="deleteAccount col-12 justify-content-center">
+          <h4 class="text-white mt-4">Supprimer votre compte</h4>
+          <div class="passwordInput">
+            <label
+              for="exampleInputPassword1"
+              class="form-label text-white"
+            ></label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Mot de passe"
+            />
+            <div id="textHelp" class="form-text text-white">
+              Veuillez renseigner votre mot de passe.
+            </div>
+            <label
+              for="exampleInputPassword1"
+              class="form-label text-white"
+            ></label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Mot de passe"
+            />
+            <div id="textHelp" class="form-text text-white">
+              Veuillez confirmer votre mot de passe.
+            </div>
+            <button
+              class="deleteButtons mt-4 btn btn-sm btn-outline-danger m-2"
+            >
+              Supprimer
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </main>
-<footer class="bg-warning text-center text-white fixed-bottom">
+<footer class="bg-warning text-center text-white">
   <div class="topFooter container p-4">
-    <section class="">
+    <section>
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <ul class="list-unstyled mb-0">

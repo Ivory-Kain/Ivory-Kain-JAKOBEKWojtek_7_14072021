@@ -1,5 +1,5 @@
 .backgroundImage {
-  background-image: url("../../assets/image/bgclear.jpg");
+  background-image: url("../../assets/image/testBg.jpg");
   background-size: cover;
   background-position: center;
   -o-object-fit: contain;
@@ -60,14 +60,15 @@ main {
     left: 40px;
     bottom: 165px;
     color: #FFCA2C;
-    width: 460px;
-    border-radius: 55% 55% 0% 0%;
+    width: 400px;
+   
 
     img {
-      border-radius: 55%;
-      width: 460px;
+      
+      width: 350px;
+      
       height: auto;
-      transform: translateY(-2px);
+      
     }
 
   }

@@ -2,33 +2,21 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
     <div class="container-fluid bg-warning">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav col-4 justify-content-start align-items-center">
-          <img
-            src="assets/image/logImageBlack.png"
+      <div class="navbar-nav col-4 justify-content-start">
+        <a class="nav-link p-0" [routerLink]="['']"
+          ><img
+            src="assets/image/logo.png"
             title="Groupomania"
             alt="Groupomania"
-          />
-        </div>
-        <div class="navbar-nav col-8 justify-content-end align-items-center">
-          <a class="nav-link fw-bold text-dark" [routerLink]="['/signup']"
-            >S'enregistrer</a
-          >
-          <a class="nav-link fw-bold text-dark" [routerLink]="['/login']"
-            >Se connecter</a
-          >
-        </div>
+        /></a>
+      </div>
+      <div class="navbar-nav col-8 justify-content-end align-items-center">
+        <a class="nav-link text-dark fw-bold" [routerLink]="['/login']"
+          >Se Connecter</a
+        >
+        <a class="nav-link text-dark fw-bold" [routerLink]="['/signup']"
+          >S'enregistrer</a
+        >
       </div>
     </div>
   </nav>
@@ -46,14 +34,14 @@
     </figcaption>
   </figure>
 </main>
-<footer class="bg-warning text-center fw-bold fixed-bottom">
+<footer class="bg-warning text-center text-white">
   <div class="topFooter container p-4">
-    <section class="">
+    <section>
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="fw-bold text-dark text-decoration-none"
+              <a href="#!" class="text-dark fw-bold text-decoration-none"
                 >Politique de confidentialité</a
               >
             </li>
@@ -62,7 +50,7 @@
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="fw-bold text-dark text-decoration-none"
+              <a href="#!" class="text-dark fw-bold text-decoration-none"
                 >Termes et conditions</a
               >
             </li>
@@ -71,7 +59,7 @@
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="fw-bold text-dark text-decoration-none"
+              <a href="#!" class="text-dark fw-bold text-decoration-none"
                 >A propos</a
               >
             </li>
@@ -80,7 +68,7 @@
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="fw-bold text-dark text-decoration-none"
+              <a href="#!" class="text-dark fw-bold text-decoration-none"
                 >Nous contacter</a
               >
             </li>
@@ -91,7 +79,7 @@
   </div>
 
   <div
-    class="botFooter text-center p-3"
+    class="botFooter text-center p-3 text-dark fw-bold"
     style="background-color: rgba(0, 0, 0, 0.2)"
   >
     <div class="allRights">

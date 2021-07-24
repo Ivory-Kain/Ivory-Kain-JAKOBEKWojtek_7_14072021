@@ -10,6 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TopicComponent } from './topic/topic.component';
 import { CommentsComponent } from './comments/comments.component';
+import { CguComponent } from './cgu/cgu.component';
+import { PolitiqueComponent } from './politique/politique.component';
+import { AboutComponent } from './about/about.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { CommentsComponent } from './comments/comments.component';
     HomeComponent,
     ProfileComponent,
     TopicComponent,
-    CommentsComponent
+    CommentsComponent,
+    CguComponent,
+    PolitiqueComponent,
+    AboutComponent,
+    
   ],
   imports: [
     BrowserModule,

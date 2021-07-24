@@ -10,56 +10,29 @@
             alt="Groupomania"
         /></a>
       </div>
+      <div class="navbar-nav col-8 justify-content-end align-items-center">
+        <i class="far fa-bell fa-2x col-2 row justify-content-center"></i>
+        <a class="nav-link text-dark fw-bold" [routerLink]="['/forum']"
+          >Forum</a
+        >
+        <a class="nav-link text-dark fw-bold" [routerLink]="['/profile']"
+          >Profile</a
+        >
+      </div>
     </div>
   </nav>
 </header>
 <main>
-  <div class="logCard d-flex justify-content-center">
-    <form class="logForm col-4">
-      <div class="logLogo d-flex justify-content-center">
-        <img
-          src="../../assets/image/logImage.png"
-          class="logCardTop col-11 m-3 mt-4"
-          alt="image"
-        />
-      </div>
-      <div class="mb-3 col-11 m-3">
-        <label for="exampleInputText" class="form-label text-white"></label>
-        <input
-          type="text"
-          class="form-control"
-          id="exampleInputText"
-          aria-describedby="textHelp"
-          placeholder="Votre Matricule"
-        />
-        <div id="textHelp" class="form-text text-white">
-          Veuillez renseigner le matricule figurant sur votre fiche de salaire.
-        </div>
-      </div>
-      <div class="mb-3 col-11 m-3">
-        <label
-          for="exampleInputPassword1"
-          class="form-label text-white"
-        ></label>
-        <input
-          type="password"
-          class="form-control"
-          id="exampleInputPassword1"
-          placeholder="Mot de passe"
-        />
-      </div>
-      <div class="logCardFooter mb-4">
-        <button
-          type="submit"
-          class="btn btn-warning col-11 m-3 text-dark fw-bold"
-        >
-          Se connecter
-        </button>
-        <a class="col-11 m-3 text-white" [routerLink]="['/signup']"
-          >Nouvel Utilisateur ?</a
-        >
-      </div>
-    </form>
+  <div class="about col-12 text-white row justify-content-center">
+    <div class="presentation col-8 mt-4 fs-4 row justify-content-center">
+      <img src="assets/image/logImage.png" alt="logo" class="col-8" />
+      <p class="mb-5">
+        Notre entreprise, spécialisée dans la grande distribution, est en pleine
+        expansion. Nous avons actuellement plus de 600 collaborateurs et avons
+        beaucoup recruté depuis quelques années. Nous étions uniquement 300 il y
+        a 3 ans.
+      </p>
+    </div>
   </div>
 </main>
 <footer class="bg-warning text-center text-white">

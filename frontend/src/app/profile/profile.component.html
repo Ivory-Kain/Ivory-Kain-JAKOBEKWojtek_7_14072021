@@ -1,0 +1,193 @@
+<div class="backgroundImage"></div>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
+    <div class="container-fluid bg-warning">
+      <div class="navbar-nav col-4 justify-content-start">
+        <a class="nav-link p-0" [routerLink]="['']"
+          ><img
+            src="assets/image/logo.png"
+            title="Groupomania"
+            alt="Groupomania"
+        /></a>
+      </div>
+      <div class="navbar-nav col-8 justify-content-end align-items-center">
+        <div class="notification col-1 d-flex justify-content-start">
+          <button
+            type="button"
+            class="
+              btn
+              bg-transparent
+              justify-content-end
+              align-items-center
+              row
+            "
+          >
+            <i class="far fa-bell fa-2x text-dark"></i
+            ><span class="badge bg-dark col-4">4</span>
+          </button>
+        </div>
+        <a class="nav-link text-dark fw-bold" [routerLink]="['/forum']"
+          >Forum</a
+        >
+        <a class="nav-link active text-dark fw-bold" [routerLink]="['/profile']"
+          >Profile</a
+        >
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <div class="container mt-3">
+    <div class="card p-3 text-center">
+      <div class="d-flex flex-row justify-content-center mb-3">
+        <div class="image">
+          <img src="assets/image/pp.jpg" class="rounded-circle" />
+          <span
+            ><i class="fas fa-camera" style="color: black !important"></i
+          ></span>
+        </div>
+        <div class="d-flex flex-column ms-3 user-details text-white">
+          <h4 class="mb-0">Wojtek Jakobek</h4>
+          <span>Dev Web</span>
+        </div>
+      </div>
+      <h4 class="text-white mt-4">Votre Profile</h4>
+      <div class="row text-white">
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Nom</label>
+            <input class="form-control" type="text" placeholder="Nom" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Prénom</label>
+            <input class="form-control" type="text" placeholder="Prénom" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Profession</label>
+            <input class="form-control" type="text" placeholder="Profession" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inputs">
+            <label>Ville</label>
+            <input class="form-control" type="text" placeholder="Ville" />
+          </div>
+        </div>
+        <div class="col-md-12 d-flex justify-content-between">
+          <div class="inputs">
+            <label>Date de naissance</label>
+            <input
+              type="date"
+              id="birthdayDate"
+              name="birthdayDate"
+              min="1900-01-01"
+              max="2200-12-31"
+              value="2021-08-01"
+            />
+          </div>
+          <div class="mt-3 gap-2">
+            <button
+              class="cancelButtons px-3 btn btn-sm btn-outline-warning m-2"
+            >
+              Cancel
+            </button>
+            <button class="saveButtons px-3 btn btn-sm btn-warning m-2">
+              Save
+            </button>
+          </div>
+        </div>
+        <div class="deleteAccount col-12 justify-content-center">
+          <h4 class="text-white mt-4">Supprimer votre compte</h4>
+          <div class="passwordInput">
+            <label for="InputPassword1" class="form-label text-white"></label>
+            <input
+              type="password"
+              class="form-control"
+              id="InputPassword1"
+              placeholder="Mot de passe"
+            />
+            <div id="textHelp" class="form-text text-white">
+              Veuillez renseigner votre mot de passe.
+            </div>
+            <label for="InputPassword2" class="form-label text-white"></label>
+            <input
+              type="password"
+              class="form-control"
+              id="InputPassword2"
+              placeholder="Mot de passe"
+            />
+            <div id="textHelp" class="form-text text-white">
+              Veuillez confirmer votre mot de passe.
+            </div>
+            <button
+              class="deleteButtons mt-4 btn btn-sm btn-outline-danger m-2"
+            >
+              Supprimer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="bg-warning text-center text-white">
+  <div class="topFooter container p-4">
+    <section>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-dark fw-bold text-decoration-none"
+                >Politique de confidentialité</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-dark fw-bold text-decoration-none"
+                >Termes et conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a
+                class="text-dark fw-bold text-decoration-none"
+                [routerLink]="['/about']"
+                >A propos</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a
+                href="mailto:groupomania@oursite.com"
+                class="text-dark fw-bold text-decoration-none"
+                >Nous contacter</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div
+    class="botFooter text-center p-3 text-dark fw-bold"
+    style="background-color: rgba(0, 0, 0, 0.2)"
+  >
+    <div class="allRights">
+      <p>@ 2021 All Rights Reserved Groupomania</p>
+    </div>
+  </div>
+</footer>

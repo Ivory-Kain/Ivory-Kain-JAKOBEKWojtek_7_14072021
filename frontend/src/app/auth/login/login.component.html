@@ -15,7 +15,7 @@
 </header>
 <main>
   <div class="logCard d-flex justify-content-center">
-    <form class="logForm col-4">
+    <form [formGroup]="loginForm" class="logForm col-4">
       <div class="logLogo d-flex justify-content-center">
         <img
           src="../../assets/image/logImage.png"
@@ -24,24 +24,21 @@
         />
       </div>
       <div class="mb-3 col-11 m-3">
-        <label for="exampleInputText" class="form-label text-white"></label>
         <input
-          type="text"
+          formControlName="email"
+          type="email"
           class="form-control"
           id="exampleInputText"
           aria-describedby="textHelp"
-          placeholder="Votre Matricule"
+          placeholder="Votre Email"
         />
         <div id="textHelp" class="form-text text-white">
           Veuillez renseigner le matricule figurant sur votre fiche de salaire.
         </div>
       </div>
       <div class="mb-3 col-11 m-3">
-        <label
-          for="exampleInputPassword1"
-          class="form-label text-white"
-        ></label>
         <input
+          formControlName="password"
           type="password"
           class="form-control"
           id="exampleInputPassword1"
@@ -50,6 +47,8 @@
       </div>
       <div class="logCardFooter mb-4">
         <button
+          [disabled]="loginForm.invalid"
+          (click)="onLogin()"
           type="submit"
           class="btn btn-warning col-11 m-3 text-dark fw-bold"
         >

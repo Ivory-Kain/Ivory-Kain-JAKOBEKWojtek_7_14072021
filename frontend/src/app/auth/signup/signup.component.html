@@ -19,18 +19,27 @@
   </nav>
 </header>
 <main>
-  <div class="logCard d-flex justify-content-center">
-    <form class="logForm col-4">
-      <div class="logLogo d-flex justify-content-center">
-        <img
-          src="../../assets/image/logImage.png"
-          class="logCardTop col-11 m-3 mt-4"
-          alt="image"
-        />
+  <div class="logCard d-flex justify-content-center col-6 row">
+    <img
+      src="../../assets/image/logImage.png"
+      class="logCardTop col-11 m-3 mt-4"
+      alt="image"
+    />
+
+    <form [formGroup]="signForm" class="logForm col-8">
+      <div class="col-11">
+        <div class="inputs">
+          <input
+            formControlName="fullName"
+            class="form-control"
+            type="text"
+            placeholder="Nom"
+          />
+        </div>
       </div>
       <div class="mb-3 col-11 m-3">
-        <label for="exampleInputEmail1" class="form-label text-white"></label>
         <input
+          formControlName="email"
           type="email"
           class="form-control"
           id="InputEmail1"
@@ -42,8 +51,8 @@
         </div>
       </div>
       <div class="mb-3 col-11 m-3">
-        <label for="InputPassword1" class="form-label text-white"></label>
         <input
+          formControlName="password"
           type="password"
           class="form-control"
           id="InputPassword1"
@@ -51,8 +60,8 @@
         />
       </div>
       <div class="mb-3 col-11 m-3">
-        <label for="InputPassword2" class="form-label text-white"></label>
         <input
+          formControlName="confirmPassword"
           type="password"
           class="form-control"
           id="InputPassword2"
@@ -65,6 +74,8 @@
 
       <div class="logCardFooter mb-4">
         <button
+          [disabled]="signForm.invalid"
+          (click)="onSignup()"
           type="submit"
           class="btn btn-warning col-11 m-3 text-dark fw-bold"
         >

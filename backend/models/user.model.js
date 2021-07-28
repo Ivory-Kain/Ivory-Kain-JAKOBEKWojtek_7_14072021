@@ -5,6 +5,9 @@
   			defaultValue: Sequelize.UUIDV1,
   			primaryKey: true
   		},
+		  fullName:{
+			type: Sequelize.STRING
+		},
   		email: {
   			type: Sequelize.STRING
   		},

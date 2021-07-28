@@ -12,19 +12,84 @@
       </div>
       <div class="navbar-nav col-8 justify-content-end align-items-center">
         <div class="notification col-1 d-flex justify-content-start">
-          <button
-            type="button"
-            class="
-              btn
-              bg-transparent
-              justify-content-end
-              align-items-center
-              row
-            "
-          >
-            <i class="far fa-bell fa-2x text-dark"></i
-            ><span class="badge bg-dark col-4">4</span>
-          </button>
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle position-relative"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="far fa-bell fa-2x text-dark"></i>
+              <span
+                class="
+                  position-absolute
+                  top-0
+                  start-100
+                  translate-middle
+                  badge
+                  rounded-pill
+                  bg-dark
+                "
+              >
+                99+
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+            <ul
+              class="dropdown-menu p-0 dropdown-menu-end"
+              aria-labelledby="dropdownMenuButton1"
+            >
+              <li>
+                <a class="dropdown-item text-white" href="#">
+                  <div
+                    class="
+                      dropDownItemTop
+                      d-flex
+                      align-items-center
+                      justify-content-around
+                    "
+                  >
+                    <img src="assets/image/avatar.jpg" alt="pp" class="mr-2" />
+                    <p class="m-0 ml-2">Nom de la personne</p>
+                  </div>
+                  <p class="mt-2">"a réagit à un de vos messages"</p>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#">
+                  <div
+                    class="
+                      dropDownItemTop
+                      d-flex
+                      align-items-center
+                      justify-content-around
+                    "
+                  >
+                    <img src="assets/image/avatar.jpg" alt="pp" class="mr-2" />
+                    <p class="m-0 ml-2">Nom de la personne</p>
+                  </div>
+                  <p class="mt-2">"a réagit à un de vos messages"</p>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#">
+                  <div
+                    class="
+                      dropDownItemTop
+                      d-flex
+                      align-items-center
+                      justify-content-around
+                    "
+                  >
+                    <img src="assets/image/avatar.jpg" alt="pp" class="mr-2" />
+                    <p class="m-0 ml-2">Nom de la personne</p>
+                  </div>
+                  <p class="mt-2">"a réagit à un de vos messages"</p>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <a class="nav-link text-dark fw-bold" [routerLink]="['/forum']"
           >Forum</a

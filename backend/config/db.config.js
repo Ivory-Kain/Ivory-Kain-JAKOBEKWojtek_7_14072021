@@ -21,10 +21,10 @@ db.sequelize = sequelize;
  
 //Models/tables
 db.user = require('../models/user.model')(sequelize, Sequelize);
-// db.profile = require('../models/profile.model')(sequelize, Sequelize);
+db.profile = require('../models/profile.model')(sequelize, Sequelize);
 
-// db.profile.belongsTo(db.user, {foreignKey: 'fk_userid', targetKey: 'uuid'});
-// db.user.hasOne(db.profile, {foreignKey: 'fk_userid', targetKey: 'uuid'});
+db.profile.belongsTo(db.user, {foreignKey: 'fk_userid', targetKey: 'uuid'});
+db.user.hasOne(db.profile, {foreignKey: 'fk_userid', targetKey: 'uuid'});
  
  
 module.exports = db;

@@ -25,10 +25,10 @@ signForm:FormGroup;
     });
   }
   onSignup() {
-    
+    const fullName = this.signForm.get('fullName').value;
     const email = this.signForm.get('email').value;
     const password = this.signForm.get('password').value;
-    this.auth.createUser(email, password).then(
+    this.auth.createUser(fullName, email, password).then(
       (response: { message: string }) => {
         console.log(response.message);
         this.auth.loginUser( email, password).then(

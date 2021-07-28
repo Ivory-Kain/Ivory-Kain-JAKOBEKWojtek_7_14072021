@@ -12,6 +12,7 @@ app.use((req, res, next) => {
 });
 
 require('./routes/auth.routes')(app);
+require('./routes/users.route')(app);
 
 const cors = require('cors')
 const corsOptions = {

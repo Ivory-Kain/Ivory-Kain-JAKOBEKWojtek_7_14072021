@@ -1,3 +1,3 @@
 module.exports = {
-    secret: "MY_SECRET_TOKEN"
-  };
+  secret: "MY_SECRET_TOKEN"
+};

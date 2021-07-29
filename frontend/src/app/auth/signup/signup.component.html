@@ -19,25 +19,27 @@
   </nav>
 </header>
 <main>
-  <div class="logCard d-flex justify-content-center col-6 row">
-    <img
-      src="../../assets/image/logImage.png"
-      class="logCardTop col-11 m-3 mt-4"
-      alt="image"
-    />
-
-    <form [formGroup]="signForm" class="logForm col-8">
-      <div class="col-11">
-        <div class="inputs">
-          <input
-            formControlName="fullName"
-            class="form-control"
-            type="text"
-            placeholder="Nom"
-          />
-        </div>
+  <div class="logCard d-flex justify-content-center">
+    <form [formGroup]="signForm" class="logForm col-4">
+      <div class="logLogo d-flex justify-content-center">
+        <img
+          src="../../assets/image/logImage.png"
+          class="logCardTop col-11 m-3 mt-4"
+          alt="image"
+        />
       </div>
+
       <div class="mb-3 col-11 m-3">
+        <input
+          formControlName="fullName"
+          class="form-control"
+          type="text"
+          placeholder="Nom"
+        />
+        <div id="textHelp" class="form-text text-white mb-4">
+          Veuillez renseigner le matricule figurant sur votre fiche de salaire.
+        </div>
+
         <input
           formControlName="email"
           type="email"

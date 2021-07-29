@@ -102,9 +102,9 @@
   </nav>
 </header>
 <main>
-  <div class="container mt-3">
-    <div class="card p-3 text-center">
-      <div class="d-flex flex-row justify-content-center mb-3">
+  <div class="d-flex justify-content-center">
+    <div class="profile col-6 p-3 mb-4">
+      <div class="d-flex flex-row justify-content-center mb-3 col-12">
         <div class="image">
           <img src="assets/image/pp.jpg" class="rounded-circle" />
           <span
@@ -116,84 +116,68 @@
           <span>Dev Web</span>
         </div>
       </div>
-      <h4 class="text-white mt-4">Votre Profile</h4>
-      <div class="row text-white">
-        <div class="col-md-6">
-          <div class="inputs">
-            <label>Nom</label>
-            <input class="form-control" type="text" placeholder="Nom" />
-          </div>
+      <h4 class="col-12 text-white mt-4 text-center text-decoration-underline">
+        Votre Profile
+      </h4>
+
+      <div class="mt-4 text-white col-12">
+        <div class="inputs mt-4">
+          <label>Nom, Prénom</label>
+          <input
+            class="form-control mt-2 mb-2"
+            type="text"
+            placeholder="Nom, Prénom"
+          />
+          <label>Profession</label>
+          <input
+            class="form-control mt-2 mb-2"
+            type="text"
+            placeholder="Profession"
+          />
         </div>
-        <div class="col-md-6">
-          <div class="inputs">
-            <label>Prénom</label>
-            <input class="form-control" type="text" placeholder="Prénom" />
-          </div>
+      </div>
+
+      <div class="d-flex justify-content-end text-white col-12">
+        <div class="mt-3 gap-2">
+          <button class="cancelButtons px-3 btn btn-sm btn-outline-warning m-2">
+            Cancel
+          </button>
+          <button class="saveButtons px-3 btn btn-sm btn-warning m-2">
+            Save
+          </button>
         </div>
-        <div class="col-md-6">
-          <div class="inputs">
-            <label>Profession</label>
-            <input class="form-control" type="text" placeholder="Profession" />
-          </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="deleteAccount col-6 p-3 mt-4">
+      <h4 class="text-white mt-4 mb-5 text-center text-decoration-underline">
+        Supprimer votre compte
+      </h4>
+      <div class="passwordInput">
+        <input
+          type="password"
+          class="form-control"
+          id="InputPassword1"
+          placeholder="Mot de passe"
+        />
+        <div id="textHelp" class="form-text text-white text-start mb-4">
+          Veuillez renseigner votre mot de passe.
         </div>
-        <div class="col-md-6">
-          <div class="inputs">
-            <label>Ville</label>
-            <input class="form-control" type="text" placeholder="Ville" />
-          </div>
+
+        <input
+          type="password"
+          class="form-control"
+          id="InputPassword2"
+          placeholder="Confirmer mot de passe"
+        />
+        <div id="textHelp" class="form-text text-white text-start mb-4">
+          Veuillez confirmer votre mot de passe.
         </div>
-        <div class="col-md-12 d-flex justify-content-between">
-          <div class="inputs">
-            <label>Date de naissance</label>
-            <input
-              type="date"
-              id="birthdayDate"
-              name="birthdayDate"
-              min="1900-01-01"
-              max="2200-12-31"
-              value="2021-08-01"
-            />
-          </div>
-          <div class="mt-3 gap-2">
-            <button
-              class="cancelButtons px-3 btn btn-sm btn-outline-warning m-2"
-            >
-              Cancel
-            </button>
-            <button class="saveButtons px-3 btn btn-sm btn-warning m-2">
-              Save
-            </button>
-          </div>
-        </div>
-        <div class="deleteAccount col-12 justify-content-center">
-          <h4 class="text-white mt-4">Supprimer votre compte</h4>
-          <div class="passwordInput">
-            <label for="InputPassword1" class="form-label text-white"></label>
-            <input
-              type="password"
-              class="form-control"
-              id="InputPassword1"
-              placeholder="Mot de passe"
-            />
-            <div id="textHelp" class="form-text text-white">
-              Veuillez renseigner votre mot de passe.
-            </div>
-            <label for="InputPassword2" class="form-label text-white"></label>
-            <input
-              type="password"
-              class="form-control"
-              id="InputPassword2"
-              placeholder="Mot de passe"
-            />
-            <div id="textHelp" class="form-text text-white">
-              Veuillez confirmer votre mot de passe.
-            </div>
-            <button
-              class="deleteButtons mt-4 btn btn-sm btn-outline-danger m-2"
-            >
-              Supprimer
-            </button>
-          </div>
+        <div class="d-flex justify-content-center">
+          <button class="deleteButtons mt-4 btn btn-sm btn-outline-danger m-2">
+            Supprimer
+          </button>
         </div>
       </div>
     </div>

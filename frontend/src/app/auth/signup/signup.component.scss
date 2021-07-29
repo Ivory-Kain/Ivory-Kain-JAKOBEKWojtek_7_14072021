@@ -24,7 +24,7 @@ header {
     height: 90px;
 
     .navbar-nav {
-      height: 90px;     
+      height: 90px;
     }
 
     .nav-link {
@@ -41,23 +41,22 @@ main {
   .logCard {
     margin-top: 40vh;
     transform: translateY(-50%);
-    border: 1px solid black;
-    background-color: rgba(0, 0, 0, 0.8);
 
-    img{
-      height: 100px;
-      width: 200px;
-      object-fit: cover;
-    }
+    .logForm {
+      border: 1px solid black;
+      background-color: rgba(0, 0, 0, 0.8);
+
       .logCardTop {
         width: 60%;
         height: 65px;
         object-fit: cover;
       }
-    
+    }
   }
 
 }
+
+
 
 footer {
   position: fixed;

@@ -32,19 +32,21 @@ header {
         &.active {
           border-bottom: black 2px solid;
         }
-        
-        
+
+
       }
-      .dropdown-item{
-        
+
+      .dropdown-item {
+
         background-color: rgba(0, 0, 0, 0.8);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-   img{
-     width: 50px;
-     height: 50px;
-   }
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
     }
-  }
 
     .nav-link {
       height: 40px;
@@ -72,14 +74,14 @@ main {
     bottom: 165px;
     color: #FFCA2C;
     width: 400px;
-   
+
 
     img {
-      
+
       width: 350px;
-      
+
       height: auto;
-      
+
     }
 
   }
@@ -104,27 +106,21 @@ footer {
   left: 0;
   bottom: 0;
   z-index: 100;
+
   .topFooter {
     height: 45px;
-  
+
     li {
       height: 22px;
     }
   }
-  
+
   .botFooter {
     height: 45px;
-  
+
     li {
       height: 22px;
     }
   }
 
 }
-
-
-
-
-
-
-

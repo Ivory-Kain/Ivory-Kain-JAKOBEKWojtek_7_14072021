@@ -2,7 +2,7 @@ const verifySignUp = require("../middleware/verifySignup");
 const controller = require("../controllers/auth.controller");
 const verifyPassword = require('../middleware/passwordValidator');
 
-module.exports = function(app) {
+module.exports = function (app) {
 
   app.post(
     "/api/auth/signup",

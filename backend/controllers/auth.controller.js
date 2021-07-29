@@ -7,24 +7,24 @@ var bcrypt = require("bcrypt");
 
 exports.signup = (req, res) => {
 
-    var user 
+    var user
     // Save User to Database
     User.create({
-        
+
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 8)
-        }).then(createdUser => {		
+        }).then(createdUser => {
             // Send created customer to client
             user = createdUser;
-            
+
             Profile.create({
-                fullName: req.body.fullName,
-                               
-            })
-            .then(profile => {
-                user.setProfile(profile)
-                res.send('OK');
-            })
+                    fullName: req.body.fullName,
+
+                })
+                .then(profile => {
+                    user.setProfile(profile)
+                    res.send('OK');
+                })
         })
         .then(() => res.status(201).json({
             message: 'Utilisateur créé !'

@@ -1,16 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed
+} from '@angular/core/testing';
 
-import { CguComponent } from './cgu.component';
+import {
+  CguComponent
+} from './cgu.component';
 
 describe('CguComponent', () => {
   let component: CguComponent;
-  let fixture: ComponentFixture<CguComponent>;
+  let fixture: ComponentFixture < CguComponent > ;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CguComponent ]
-    })
-    .compileComponents();
+        declarations: [CguComponent]
+      })
+      .compileComponents();
   });
 
   beforeEach(() => {

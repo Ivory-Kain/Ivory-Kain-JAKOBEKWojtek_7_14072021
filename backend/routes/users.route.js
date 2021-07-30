@@ -4,4 +4,5 @@ module.exports = function (app) {
 
 
     app.get('/api/users', Users.findAll);
+    
 }

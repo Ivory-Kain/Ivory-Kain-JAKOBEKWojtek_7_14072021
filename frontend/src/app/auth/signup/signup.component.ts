@@ -48,7 +48,7 @@ export class SignupComponent implements OnInit {
         console.log(response.message);
         this.auth.loginUser(email, password).then(
           () => {
-            this.router.navigate(['/profile']);
+            this.router.navigate(['/forum']);
           }
         ).catch(
           (error) => {

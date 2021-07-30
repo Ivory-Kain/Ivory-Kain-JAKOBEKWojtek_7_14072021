@@ -1,38 +1,24 @@
-import {
-  Injectable
-} from '@angular/core';
-import {
-  HttpClient
-} from '@angular/common/http';
-import {
-  BehaviorSubject
-} from 'rxjs';
-import {
-  Router
-} from '@angular/router';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  isAuth$ = new BehaviorSubject < boolean > (false);
+  isAuth$ = new BehaviorSubject<boolean>(false);
   private authToken: string;
   private userId: string;
 
   constructor(private http: HttpClient,
-    private router: Router) {}
+              private router: Router) {}
 
-  createUser(fullName: string, email: string, password: string) {
+  createUser( fullName:string, email: string, password: string) {
     return new Promise((resolve, reject) => {
-      this.http.post('http://localhost:8080/api/auth/signup', {
-        fullName: fullName,
-        email: email,
-        password: password
-      }).subscribe(
-        (response: {
-          message: string
-        }) => {
+      this.http.post('http://localhost:8080/api/auth/signup', { fullName: fullName, email: email, password: password}).subscribe(
+        (response: { message: string }) => {
           resolve(response);
         },
         (error) => {
@@ -52,15 +38,9 @@ export class AuthService {
   }
 
   loginUser(email: string, password) {
-    return new Promise < void > ((resolve, reject) => {
-      this.http.post('http://localhost:8080/api/auth/login', {
-        email: email,
-        password: password
-      }).subscribe(
-        (response: {
-          userId: string,
-          token: string
-        }) => {
+    return new Promise<void>((resolve, reject) => {
+      this.http.post('http://localhost:8080/api/auth/login', {email: email, password: password}).subscribe(
+        (response: {userId: string, token: string}) => {
           this.userId = response.userId;
           this.authToken = response.token;
           this.isAuth$.next(true);

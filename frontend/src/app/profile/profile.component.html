@@ -102,79 +102,31 @@
   </nav>
 </header>
 <main>
-  <div class="d-flex justify-content-center">
-    <div class="profile col-6 p-3 mb-4">
-      <div class="d-flex flex-row justify-content-center mb-3 col-12">
-        <div class="image">
-          <img src="assets/image/pp.jpg" class="rounded-circle" />
-          <span
-            ><i class="fas fa-camera" style="color: black !important"></i
-          ></span>
-        </div>
-        <div class="d-flex flex-column ms-3 user-details text-white">
-          <h4 class="mb-0">Wojtek Jakobek</h4>
-          <span>Dev Web</span>
-        </div>
-      </div>
-      <h4 class="col-12 text-white mt-4 text-center text-decoration-underline">
-        Votre Profile
-      </h4>
-
-      <div class="mt-4 text-white col-12">
-        <div class="inputs mt-4">
-          <label>Nom, Prénom</label>
+  <div class="container mt-3">
+    <div class="row text-white">
+      <div class="deleteAccount col-12 justify-content-center">
+        <h4 class="text-white mt-4">Supprimer votre compte</h4>
+        <div class="passwordInput">
+          <label for="InputPassword1" class="form-label text-white"></label>
           <input
-            class="form-control mt-2 mb-2"
-            type="text"
-            placeholder="Nom, Prénom"
+            type="password"
+            class="form-control"
+            id="InputPassword1"
+            placeholder="Mot de passe"
           />
-          <label>Profession</label>
+          <div id="textHelp" class="form-text text-white">
+            Veuillez renseigner votre mot de passe.
+          </div>
+          <label for="InputPassword2" class="form-label text-white"></label>
           <input
-            class="form-control mt-2 mb-2"
-            type="text"
-            placeholder="Profession"
+            type="password"
+            class="form-control"
+            id="InputPassword2"
+            placeholder="Mot de passe"
           />
-        </div>
-      </div>
-
-      <div class="d-flex justify-content-end text-white col-12">
-        <div class="mt-3 gap-2">
-          <button class="cancelButtons px-3 btn btn-sm btn-outline-warning m-2">
-            Cancel
-          </button>
-          <button class="saveButtons px-3 btn btn-sm btn-warning m-2">
-            Save
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center">
-    <div class="deleteAccount col-6 p-3 mt-4">
-      <h4 class="text-white mt-4 mb-5 text-center text-decoration-underline">
-        Supprimer votre compte
-      </h4>
-      <div class="passwordInput">
-        <input
-          type="password"
-          class="form-control"
-          id="InputPassword1"
-          placeholder="Mot de passe"
-        />
-        <div id="textHelp" class="form-text text-white text-start mb-4">
-          Veuillez renseigner votre mot de passe.
-        </div>
-
-        <input
-          type="password"
-          class="form-control"
-          id="InputPassword2"
-          placeholder="Confirmer mot de passe"
-        />
-        <div id="textHelp" class="form-text text-white text-start mb-4">
-          Veuillez confirmer votre mot de passe.
-        </div>
-        <div class="d-flex justify-content-center">
+          <div id="textHelp" class="form-text text-white">
+            Veuillez confirmer votre mot de passe.
+          </div>
           <button class="deleteButtons mt-4 btn btn-sm btn-outline-danger m-2">
             Supprimer
           </button>

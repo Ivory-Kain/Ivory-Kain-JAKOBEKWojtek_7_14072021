@@ -7,14 +7,21 @@ exports.findAll = (req, res) => {
 	User.findAll({
 		attributes: [
 			['uuid', 'userId'],
-			['email', 'email']
+			['email', 'email'],
+		
 		],
 		include: [{
-			model: Profile,
-			attributes: ['fullName', 'job', 'avatarUrl']
+			model: Profile, 
+			attributes: ['fullName']
 		}]
 	}).then(users => {
 		res.send(users);
 	});
 
 };
+
+
+
+
+
+

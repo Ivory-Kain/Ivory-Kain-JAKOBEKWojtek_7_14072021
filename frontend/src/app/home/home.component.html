@@ -1,16 +1,33 @@
 <div class="backgroundImage imgage-fluid"></div>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
-    <div class="container-fluid bg-warning">
-      <div class="navbar-nav col-4 justify-content-start">
-        <a class="nav-link p-0" [routerLink]="['']"
+  <nav class="col-sm-12 navbar navbar-expand d-flex justify-content-around p-0">
+    <div class="container-fluid col-sm-12 d-flex flex-column bg-warning">
+      <div
+        class="
+          navbar-nav
+          logo
+          col-xl-4
+          align-items-center
+          justify-content-around
+        "
+      >
+        <a class="nav-link mb-0 mt-2 p-0" [routerLink]="['']"
           ><img
+            class="img-fluid"
             src="assets/image/logo.png"
             title="Groupomania"
             alt="Groupomania"
         /></a>
       </div>
-      <div class="navbar-nav col-8 justify-content-end align-items-center">
+      <div
+        class="
+          navbar-nav
+          col-sm-8
+          mt-0
+          justify-content-around
+          align-items-center
+        "
+      >
         <a class="nav-link text-dark fw-bold" [routerLink]="['/login']"
           >Se Connecter</a
         >
@@ -22,7 +39,7 @@
   </nav>
 </header>
 <main class="col-12 d-flex justify-content-center">
-  <figure class="citation col-4">
+  <figure class="citation justify-content-center col-4">
     <blockquote
       class="blockquote text-white fw-bold fs-4 fst-italic text-center"
     >
@@ -35,11 +52,11 @@
   </figure>
 </main>
 <footer class="bg-warning text-center text-white">
-  <div class="topFooter container p-4">
+  <div class="topFooter container">
     <section>
       <div class="row">
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-sm-6">
+          <ul class="list-unstyled mt-0">
             <li>
               <a
                 class="text-dark fw-bold text-decoration-none"
@@ -49,8 +66,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-sm-6">
+          <ul class="list-unstyled">
             <li>
               <a
                 class="text-dark fw-bold text-decoration-none"
@@ -60,8 +77,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-sm-6">
+          <ul class="list-unstyled">
             <li>
               <a
                 class="text-dark fw-bold text-decoration-none"
@@ -71,8 +88,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-sm-6">
+          <ul class="list-unstyled">
             <li>
               <a
                 href="mailto:groupomania@oursite.com"
@@ -85,7 +102,6 @@
       </div>
     </section>
   </div>
-
   <div
     class="botFooter text-center p-3 text-dark fw-bold"
     style="background-color: rgba(0, 0, 0, 0.2)"

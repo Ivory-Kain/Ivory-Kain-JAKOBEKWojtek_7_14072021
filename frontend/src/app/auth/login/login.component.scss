@@ -14,25 +14,12 @@
 }
 
 header {
-  height: 90px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-
-  .navbar {
-    height: 90px;
-
-    .navbar-nav {
-      height: 90px;
-
-
-    }
-
-    .nav-link {
-      height: 40px;
-
-      img {
+  font-size: smaller;
+  .container-fluid{
+    height: 100%;
+    .navbar {
+      height: 100px;
+      .logo{
         height: 90px;
       }
     }
@@ -40,19 +27,25 @@ header {
 }
 
 main {
-  .logCard {
-    margin-top: 40vh;
-    transform: translateY(-50%);
-
+  height: 100%;
+ 
+  .logCard {    
+   
+  
+    
+   
+    
     .logForm {
       border: 1px solid black;
       background-color: rgba(0, 0, 0, 0.8);
-
-      .logCardTop {
-        width: 60%;
-        height: 65px;
-        object-fit: cover;
-      }
+      .logLogo{
+        width: 100%;
+        .logCardTop {
+          width: 60%;
+          height: 65px;
+          object-fit: cover;
+        }
+      }      
     }
   }
 
@@ -66,10 +59,11 @@ footer {
   z-index: 100;
 
   .topFooter {
-    height: 45px;
+    height: auto;
+    font-size: smaller;
 
     li {
-      height: 22px;
+      height: auto;
     }
   }
 
@@ -80,5 +74,4 @@ footer {
       height: 22px;
     }
   }
-
 }

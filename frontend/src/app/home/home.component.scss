@@ -14,36 +14,22 @@
 }
 
 header {
-  height: 90px;
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-  top: 0;
+  font-size: smaller;
 
   .navbar {
+    height: 100px;
+  }
+
+  .logo {
     height: 90px;
-
-    .navbar-nav {
-      height: 90px;
-    }
-
-    .nav-link {
-      height: 40px;
-
-      img {
-        height: 90px;
-      }
-    }
   }
 }
 
 main {
-  padding-top: 90px;
-  padding-bottom: 90px;
-
   .citation {
-    margin-top: 20vh;
+    margin-top: 10vh;
     background-color: rgba(0, 0, 0, 0.8);
+    width: 80%;
   }
 }
 
@@ -55,10 +41,11 @@ footer {
   z-index: 100;
 
   .topFooter {
-    height: 45px;
+    height: auto;
+    font-size: smaller;
 
     li {
-      height: 22px;
+      height: auto;
     }
   }
 
@@ -69,5 +56,4 @@ footer {
       height: 22px;
     }
   }
-
 }

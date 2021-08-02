@@ -1,10 +1,19 @@
 <div class="backgroundImage"></div>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
-    <div class="container-fluid bg-warning">
-      <div class="navbar-nav col-4 justify-content-start">
-        <a class="nav-link p-0" [routerLink]="['']"
+  <nav class="col-sm-12 navbar navbar-expand d-flex justify-content-around p-0">
+    <div class="container-fluid col-sm-12 d-flex flex-column bg-warning">
+      <div
+        class="
+          navbar-nav
+          logo
+          col-xl-4
+          align-items-center
+          justify-content-around
+        "
+      >
+        <a class="nav-link mb-0 mt-2 p-0" [routerLink]="['']"
           ><img
+            class="img-fluid"
             src="assets/image/logo.png"
             title="Groupomania"
             alt="Groupomania"
@@ -15,15 +24,15 @@
 </header>
 <main>
   <div class="logCard d-flex justify-content-center">
-    <form [formGroup]="loginForm" class="logForm col-4">
+    <form [formGroup]="loginForm" class="logForm">
       <div class="logLogo d-flex justify-content-center">
         <img
           src="../../assets/image/logImage.png"
-          class="logCardTop col-11 m-3 mt-4"
+          class="logCardTop m-3 mt-4"
           alt="image"
         />
       </div>
-      <div class="mb-3 col-11 m-3">
+      <div class="logMail mb-3 m-3">
         <input
           formControlName="email"
           type="email"
@@ -32,8 +41,8 @@
           aria-describedby="textHelp"
           placeholder="Votre Email"
         />
-        <div id="textHelp" class="form-text text-white">
-          Veuillez renseigner le matricule figurant sur votre fiche de salaire.
+        <div id="textHelp" class="form-text text-white mb-4">
+          Veuillez renseigner votre adresse Email.
         </div>
 
         <input
@@ -61,11 +70,11 @@
   </div>
 </main>
 <footer class="bg-warning text-center text-white">
-  <div class="topFooter container p-4">
+  <div class="topFooter container">
     <section>
       <div class="row">
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-sm-6">
+          <ul class="list-unstyled mt-0">
             <li>
               <a
                 class="text-dark fw-bold text-decoration-none"
@@ -75,8 +84,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-sm-6">
+          <ul class="list-unstyled">
             <li>
               <a
                 class="text-dark fw-bold text-decoration-none"
@@ -86,8 +95,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-sm-6">
+          <ul class="list-unstyled">
             <li>
               <a
                 class="text-dark fw-bold text-decoration-none"
@@ -97,8 +106,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-sm-6">
+          <ul class="list-unstyled">
             <li>
               <a
                 href="mailto:groupomania@oursite.com"
@@ -111,7 +120,6 @@
       </div>
     </section>
   </div>
-
   <div
     class="botFooter text-center p-3 text-dark fw-bold"
     style="background-color: rgba(0, 0, 0, 0.2)"

@@ -1,32 +1,29 @@
 <div class="backgroundImage"></div>
-<header class="d-flex align-items-center justify-content-around text-center">
-  <nav class="col-12 navbar navbar-expand p-0">
-    <div class="container-fluid col-12 bg-warning p-0">
-      <div
-        class="navbar-nav logo col-4 align-items-center justify-content-start"
-      >
-        <a class="nav-link mb-0 mt-2 p-0" [routerLink]="['']"
-          ><img
-            class="img-fluid"
-            src="assets/image/logo.png"
-            title="Groupomania"
-            alt="Groupomania"
-        /></a>
-      </div>
+<header>
+  <nav class="navbar navbar-expand-md navbar-light bg-warning">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['']">
+        <img
+          class="img-fluid"
+          src="assets/image/logo.png"
+          title="Groupomania"
+          alt="Groupomania"
+        />
+      </a>
     </div>
   </nav>
 </header>
 <main>
-  <div class="logCard d-flex justify-content-center col-12">
-    <form [formGroup]="loginForm" class="logForm">
+  <div class="logCard d-flex col-12 justify-content-center">
+    <form [formGroup]="loginForm" class="logForm col-md-6 col-10">
       <div class="logLogo d-flex justify-content-center">
         <img
           src="../../assets/image/logImage.png"
-          class="logCardTop m-3 mt-4"
+          class="logCardTop m-3"
           alt="image"
         />
       </div>
-      <div class="logMail mb-3 m-3">
+      <div class="mb-3 m-3">
         <input
           formControlName="email"
           type="email"
@@ -35,8 +32,8 @@
           aria-describedby="textHelp"
           placeholder="Votre Email"
         />
-        <div id="textHelp" class="form-text text-white mb-4">
-          Veuillez renseigner votre adresse Email.
+        <div id="textHelp" class="form-text text-white mb-3">
+          Veuillez renseigner votre adresse Email
         </div>
 
         <input
@@ -47,18 +44,26 @@
           placeholder="Mot de passe"
         />
       </div>
-      <div class="logCardFooter mb-4">
+      <div class="logCardFooter mb-4 col-12 d-md-flex justify-content-between">
+        <a class="m-3 text-white" [routerLink]="['/signup']"
+          >Nouvel Utilisateur ?</a
+        >
         <button
           [disabled]="loginForm.invalid"
           (click)="onLogin()"
           type="submit"
-          class="btn btn-warning col-11 m-3 text-dark fw-bold"
+          class="
+            btn btn-warning
+            me-4
+            ms-4
+            mt-3
+            text-dark
+            fw-bold
+            col-md-4 col-10
+          "
         >
           Se connecter
         </button>
-        <a class="col-11 m-3 text-white" [routerLink]="['/signup']"
-          >Nouvel Utilisateur ?</a
-        >
       </div>
     </form>
   </div>
@@ -66,8 +71,8 @@
 <footer class="bg-warning text-center text-white">
   <div class="topFooter container">
     <section>
-      <div class="row">
-        <div class="col-sm-6">
+      <div class="row d-flex align-items-center mt-2">
+        <div class="col-12 col-md-3 col-sm-6">
           <ul class="list-unstyled mt-0">
             <li>
               <a
@@ -78,7 +83,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-6">
+        <div class="col-12 col-md-3 col-sm-6">
           <ul class="list-unstyled">
             <li>
               <a
@@ -89,7 +94,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-6">
+        <div class="col-12 col-md-3 col-sm-6">
           <ul class="list-unstyled">
             <li>
               <a
@@ -100,7 +105,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-6">
+        <div class="col-12 col-md-3 col-sm-6">
           <ul class="list-unstyled">
             <li>
               <a

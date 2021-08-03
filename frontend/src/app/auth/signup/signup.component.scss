@@ -14,43 +14,27 @@
 }
 
 header {
-  height: 90px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-
-  .navbar {
-    height: 90px;
-
-    .navbar-nav {
-      height: 90px;
-    }
-
-    .nav-link {
-      height: 40px;
-
-      img {
-        height: 90px;
-      }
-    }
+  
+  img {
+    width: 250px;
   }
 }
 
 main {
+  padding-top: 50px;
+  padding-bottom: 90px;
   .logCard {
-    margin-top: 40vh;
-    transform: translateY(-50%);
-
+    margin-bottom: 30vh;
+    margin-top: 1vh;
     .logForm {
       border: 1px solid black;
       background-color: rgba(0, 0, 0, 0.8);
-
-      .logCardTop {
-        width: 60%;
-        height: 65px;
+      img{
+        height: 50px;
+        width: 200px;
         object-fit: cover;
       }
+      
     }
   }
 
@@ -60,16 +44,19 @@ main {
 
 footer {
   position: fixed;
-  width: 100%;
   left: 0;
   bottom: 0;
-  z-index: 100;
+  width: 100%;
+  
+ 
+
 
   .topFooter {
-    height: 45px;
+    height: auto;
+    font-size: smaller;
 
     li {
-      height: 22px;
+      height: auto;
     }
   }
 
@@ -80,5 +67,5 @@ footer {
       height: 22px;
     }
   }
-
 }
+

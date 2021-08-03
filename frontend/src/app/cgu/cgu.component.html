@@ -1,106 +1,21 @@
 <div class="backgroundImage"></div>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
-    <div class="container-fluid bg-warning">
-      <div class="navbar-nav col-4 justify-content-start">
-        <a class="nav-link p-0" [routerLink]="['']"
-          ><img
-            src="assets/image/logo.png"
-            title="Groupomania"
-            alt="Groupomania"
-        /></a>
-      </div>
-      <div class="navbar-nav col-8 justify-content-end align-items-center">
-        <div class="notification col-1 d-flex justify-content-start">
-          <div class="dropdown">
-            <button
-              class="btn dropdown-toggle position-relative"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i class="far fa-bell fa-2x text-dark"></i>
-              <span
-                class="
-                  position-absolute
-                  top-0
-                  start-100
-                  translate-middle
-                  badge
-                  rounded-pill
-                  bg-dark
-                "
-              >
-                99+
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>
-            <ul
-              class="dropdown-menu p-0 dropdown-menu-end"
-              aria-labelledby="dropdownMenuButton1"
-            >
-              <li>
-                <a class="dropdown-item text-white" href="#">
-                  <div
-                    class="
-                      dropDownItemTop
-                      d-flex
-                      align-items-center
-                      justify-content-around
-                    "
-                  >
-                    <p class="m-0 ml-2">Nom de la personne</p>
-                  </div>
-                  <p class="mt-2">"a réagit à un de vos messages"</p>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#">
-                  <div
-                    class="
-                      dropDownItemTop
-                      d-flex
-                      align-items-center
-                      justify-content-around
-                    "
-                  >
-                    <p class="m-0 ml-2">Nom de la personne</p>
-                  </div>
-                  <p class="mt-2">"a réagit à un de vos messages"</p>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#">
-                  <div
-                    class="
-                      dropDownItemTop
-                      d-flex
-                      align-items-center
-                      justify-content-around
-                    "
-                  >
-                    <p class="m-0 ml-2">Nom de la personne</p>
-                  </div>
-                  <p class="mt-2">"a réagit à un de vos messages"</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <a class="nav-link text-dark fw-bold" [routerLink]="['/forum']"
-          >Forum</a
-        >
-        <a class="nav-link text-dark fw-bold" [routerLink]="['/profile']"
-          >Profile</a
-        >
-      </div>
+  <nav class="navbar navbar-expand-md navbar-light bg-warning col-12">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['']">
+        <img
+          class="img-fluid"
+          src="assets/image/logo.png"
+          title="Groupomania"
+          alt="Groupomania"
+        />
+      </a>
     </div>
   </nav>
 </header>
 <main>
-  <div class="cgu col-12 text-white row justify-content-center">
-    <div class="article col-8 mt-4">
+  <div class="cgu text-white d-flex justify-content-center">
+    <div class="article col-md-8 col-12 p-4 mt-4">
       <h1 class="text-center mt-4 col-12 mb-4">
         Conditions générales d'utilisation du site Groupomania
       </h1>
@@ -233,11 +148,11 @@
   </div>
 </main>
 <footer class="bg-warning text-center text-white">
-  <div class="topFooter container p-4">
+  <div class="topFooter container">
     <section>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+      <div class="row d-flex align-items-center mt-2">
+        <div class="col-12 col-md-3 col-sm-6">
+          <ul class="list-unstyled mt-0">
             <li>
               <a
                 class="text-dark fw-bold text-decoration-none"
@@ -247,8 +162,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-12 col-md-3 col-sm-6">
+          <ul class="list-unstyled">
             <li>
               <a
                 class="text-dark fw-bold text-decoration-none"
@@ -258,8 +173,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-12 col-md-3 col-sm-6">
+          <ul class="list-unstyled">
             <li>
               <a
                 class="text-dark fw-bold text-decoration-none"
@@ -269,8 +184,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-12 col-md-3 col-sm-6">
+          <ul class="list-unstyled">
             <li>
               <a
                 href="mailto:groupomania@oursite.com"
@@ -283,7 +198,6 @@
       </div>
     </section>
   </div>
-
   <div
     class="botFooter text-center p-3 text-dark fw-bold"
     style="background-color: rgba(0, 0, 0, 0.2)"

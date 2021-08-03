@@ -14,57 +14,18 @@
 }
 
 header {
-  height: 90px;
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-
-  .navbar {
-    height: 90px;
-
-    .navbar-nav {
-      height: 90px;
-
-      a {
-        border-bottom: transparent 2px solid;
-
-        &.active {
-          border-bottom: black 2px solid;
-        }
-
-
-      }
-
-      .dropdown-item {
-
-        background-color: rgba(0, 0, 0, 0.8);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-        img {
-          width: 50px;
-          height: 50px;
-        }
-      }
-    }
-
-    .nav-link {
-      height: 40px;
-
-      img {
-        height: 90px;
-      }
-    }
+  img {
+    width: 250px;
   }
 }
 
-main {
-  padding-top: 90px;
-  padding-bottom: 90px;
 
-  .about {
-    margin-top: 40vh;
-    transform: translateY(-50%);
+main {
+  padding-top: 10px;
+  padding-bottom: 210px;
+
+  
+    
 
     .presentation {
       background-color: rgba(0, 0, 0, 0.8);
@@ -72,27 +33,26 @@ main {
 
       img {
         object-fit: cover;
-        width: 550px;
-        height: 300px;
+        width: 250px;
+        height: 100px;
       }
-    }
-  }
+      }
 
 
 }
 
 footer {
   position: fixed;
-  width: 100%;
   left: 0;
   bottom: 0;
-  z-index: 100;
+  width: 100%;
 
   .topFooter {
-    height: 45px;
+    height: auto;
+    font-size: smaller;
 
     li {
-      height: 22px;
+      height: auto;
     }
   }
 
@@ -103,5 +63,4 @@ footer {
       height: 22px;
     }
   }
-
 }

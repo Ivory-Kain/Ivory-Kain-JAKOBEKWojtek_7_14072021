@@ -20,16 +20,12 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 //Models/tables
-db.user = require('../models/user.model')(sequelize, Sequelize);
-db.profile = require('../models/profile.model')(sequelize, Sequelize);
+db.user = require('../models/user.model')(sequelize);
+db.post = require('../models/post.model')(sequelize);
 
-db.profile.belongsTo(db.user, {
+db.post.hasOne(db.user, {
   foreignKey: 'fk_userid',
-  targetKey: 'uuid'
-});
-db.user.hasOne(db.profile, {
-  foreignKey: 'fk_userid',
-  targetKey: 'uuid'
+  targetKey: 'user_id'
 });
 
 

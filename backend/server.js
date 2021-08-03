@@ -38,3 +38,15 @@ db.sequelize.sync();
 // db.sequelize.sync({force: true}).then(() => {
 //   console.log('Drop and Resync with { force: true }');
 // });
+
+
+db.user.create({fullName:'Jean Louis', email:'blabla@blabla.com', password:'azerty'})
+.then((user)=>{
+  console.log(user.toJSON());
+  db.post.create({	
+    title: "titre",
+    user_id: user.id,
+        })
+}); 
+
+

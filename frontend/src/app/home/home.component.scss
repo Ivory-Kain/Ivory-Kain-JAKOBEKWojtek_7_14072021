@@ -14,20 +14,28 @@
 }
 
 header {
+  
   font-size: smaller;
+  .container-fluid{
+    height: 100%;
+    width: 100%;
+  }
 
   .navbar {
     height: 100px;
   }
 
   .logo {
-    height: 90px;
+    height: 100%;
   }
 }
 
 main {
   .citation {
-    margin-top: 10vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
     width: 80%;
   }

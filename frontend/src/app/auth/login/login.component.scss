@@ -26,15 +26,12 @@ header {
   }
 }
 
-main {
-  height: 100%;
- 
+main { 
   .logCard {    
-   
-  
-    
-   
-    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
     .logForm {
       border: 1px solid black;
       background-color: rgba(0, 0, 0, 0.8);

@@ -1,26 +1,60 @@
 <div class="backgroundImage"></div>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
-    <div class="container-fluid bg-warning">
-      <div class="navbar-nav col-4 justify-content-start">
-        <a class="nav-link p-0" [routerLink]="['']"
-          ><img
-            src="assets/image/logo.png"
-            title="Groupomania"
-            alt="Groupomania"
-        /></a>
-      </div>
-      <div class="navbar-nav col-8 justify-content-end align-items-center">
-        <div class="notification col-1 d-flex justify-content-start">
+  <nav class="navbar navbar-expand-md navbar-light bg-warning">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['']">
+        <img
+          class="img-fluid"
+          src="assets/image/logo.png"
+          title="Groupomania"
+          alt="Groupomania"
+        />
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbars"
+        aria-controls="navbars"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse col-4" id="navbars">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0 col-12">
+        <li class="nav-item mt-2 col-6 text-center">
+          <a class="nav-link text-dark fw-bold" [routerLink]="['/forum']"
+            >Forum</a
+          >
+        </li>
+        <li class="nav-item mt-2 col-6 text-center">
+          <a class="nav-link text-dark fw-bold" [routerLink]="['/profile']"
+            >Profile</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main>
+  <div class="container mt-3">
+    <div class="cardProfile col-md-7 col-12 mx-auto">
+      <div
+        class="cardProfileTop justify-content-center d-flex align-items-center"
+      >
+        <div class="notification d-flex justify-content-around col-md-6 m-4">
           <div class="dropdown">
             <button
-              class="btn dropdown-toggle position-relative"
+              class="btn dropdown-toggle position-relative text-warning"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="far fa-bell fa-2x text-dark"></i>
+              <i class="far fa-bell fa-2x text-warning"></i>
               <span
                 class="
                   position-absolute
@@ -29,15 +63,16 @@
                   translate-middle
                   badge
                   rounded-pill
-                  bg-dark
+                  bg-warning
+                  text-dark
                 "
               >
-                99+
+                {{ counter }}
                 <span class="visually-hidden">unread messages</span>
               </span>
             </button>
             <ul
-              class="dropdown-menu p-0 dropdown-menu-end"
+              class="dropdown-menu p-0 dropdown-menu-end bg-dark"
               aria-labelledby="dropdownMenuButton1"
             >
               <li>
@@ -50,59 +85,26 @@
                       justify-content-around
                     "
                   >
-                    <img src="assets/image/avatar.jpg" alt="pp" class="mr-2" />
-                    <p class="m-0 ml-2">Nom de la personne</p>
+                    <p class="m-0 ml-2">{{ reactName }}</p>
                   </div>
-                  <p class="mt-2">"a réagit à un de vos messages"</p>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#">
-                  <div
-                    class="
-                      dropDownItemTop
-                      d-flex
-                      align-items-center
-                      justify-content-around
-                    "
-                  >
-                    <img src="assets/image/avatar.jpg" alt="pp" class="mr-2" />
-                    <p class="m-0 ml-2">Nom de la personne</p>
-                  </div>
-                  <p class="mt-2">"a réagit à un de vos messages"</p>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#">
-                  <div
-                    class="
-                      dropDownItemTop
-                      d-flex
-                      align-items-center
-                      justify-content-around
-                    "
-                  >
-                    <img src="assets/image/avatar.jpg" alt="pp" class="mr-2" />
-                    <p class="m-0 ml-2">Nom de la personne</p>
-                  </div>
-                  <p class="mt-2">"a réagit à un de vos messages"</p>
+                  <p class="mt-2">{{ reactNameTopic }}</p>
                 </a>
               </li>
             </ul>
           </div>
+          <h3 class="text-center mt-2 text-warning">{{ accountName }}</h3>
         </div>
-        <a class="nav-link text-dark fw-bold" [routerLink]="['/forum']"
-          >Forum</a
+      </div>
+      <div class="newPost col-md-12 d-flex justify-content-center">
+        <button
+          type="submit"
+          class="createButtons px-3 btn btn-sm btn-outline-warning fw-bold mb-4"
+          [routerLink]="['/topic']"
         >
-        <a class="nav-link active text-dark fw-bold" [routerLink]="['/profile']"
-          >Profile</a
-        >
+          Nouveau Message
+        </button>
       </div>
     </div>
-  </nav>
-</header>
-<main>
-  <div class="container mt-3">
     <div class="row text-white">
       <div class="deleteAccount col-12 justify-content-center">
         <h4 class="text-white mt-4">Supprimer votre compte</h4>

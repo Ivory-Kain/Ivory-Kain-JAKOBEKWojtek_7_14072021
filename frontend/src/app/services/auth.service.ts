@@ -4,30 +4,33 @@ import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-
   isAuth$ = new BehaviorSubject<boolean>(false);
   private authToken: string;
   private userId: string;
 
-  constructor(private http: HttpClient,
-              private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
-  createUser( fullName:string, email: string, password: string) {
+  createUser(fullName: string, email: string, password: string) {
     return new Promise((resolve, reject) => {
-      this.http.post('http://localhost:8080/api/auth/signup', { fullName: fullName, email: email, password: password}).subscribe(
-        (response: { message: string }) => {
-          resolve(response);
-        },
-        (error) => {
-          reject(error);
-        }
-      );
+      this.http
+        .post('http://localhost:8080/api/auth/signup', {
+          fullName: fullName,
+          email: email,
+          password: password,
+        })
+        .subscribe(
+          (response: { message: string }) => {
+            resolve(response);
+          },
+          (error) => {
+            reject(error);
+          }
+        );
     });
   }
-
 
   getToken() {
     return this.authToken;
@@ -39,17 +42,22 @@ export class AuthService {
 
   loginUser(email: string, password) {
     return new Promise<void>((resolve, reject) => {
-      this.http.post('http://localhost:8080/api/auth/login', {email: email, password: password}).subscribe(
-        (response: {userId: string, token: string}) => {
-          this.userId = response.userId;
-          this.authToken = response.token;
-          this.isAuth$.next(true);
-          resolve();
-        },
-        (error) => {
-          reject(error);
-        }
-      );
+      this.http
+        .post('http://localhost:8080/api/auth/login', {
+          email: email,
+          password: password,
+        })
+        .subscribe(
+          (response: { userId: string; token: string }) => {
+            this.userId = response.userId;
+            this.authToken = response.token;
+            this.isAuth$.next(true);
+            resolve();
+          },
+          (error) => {
+            reject(error);
+          }
+        );
     });
   }
 
@@ -59,5 +67,4 @@ export class AuthService {
     this.isAuth$.next(false);
     this.router.navigate(['login']);
   }
-
 }

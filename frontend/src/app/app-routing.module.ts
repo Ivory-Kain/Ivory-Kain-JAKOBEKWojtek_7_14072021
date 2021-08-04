@@ -11,22 +11,21 @@ import { PolitiqueComponent } from './politique/politique.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TopicComponent } from './topic/topic.component';
 
-
 const routes: Routes = [
-  { path:'', component:HomeComponent },
-  { path:'login', component:LoginComponent },
-  { path:'signup', component:SignupComponent },
-  { path:'forum', component:ForumComponent },  
-  { path:'profile', component:ProfileComponent },
-  {path:'topic', component: TopicComponent},
-  {path:'comments', component: CommentsComponent},
-  {path:'cgu', component: CguComponent},
-  {path:'politique', component: PolitiqueComponent},
-  {path:'about', component: AboutComponent},
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'forum', component: ForumComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'topic', component: TopicComponent },
+  { path: 'comments', component: CommentsComponent },
+  { path: 'cgu', component: CguComponent },
+  { path: 'politique', component: PolitiqueComponent },
+  { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

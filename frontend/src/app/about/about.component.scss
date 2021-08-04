@@ -19,26 +19,20 @@ header {
   }
 }
 
-
 main {
   padding-top: 10px;
   padding-bottom: 210px;
 
-  
-    
+  .presentation {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-    .presentation {
-      background-color: rgba(0, 0, 0, 0.8);
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-      img {
-        object-fit: cover;
-        width: 250px;
-        height: 100px;
-      }
-      }
-
-
+    img {
+      object-fit: cover;
+      width: 250px;
+      height: 100px;
+    }
+  }
 }
 
 footer {

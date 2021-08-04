@@ -1,136 +1,133 @@
 <div class="backgroundImage"></div>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
-    <div class="container-fluid bg-warning">
-      <div class="navbar-nav col-4 justify-content-start">
-        <a class="nav-link p-0" [routerLink]="['']"
-          ><img
-            src="assets/image/logo.png"
-            title="Groupomania"
-            alt="Groupomania"
-        /></a>
-      </div>
-      <div class="navbar-nav col-8 justify-content-end align-items-center">
-        <div class="notification col-1 d-flex justify-content-start">
-          <div class="dropdown">
-            <button
-              class="btn dropdown-toggle position-relative"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i class="far fa-bell fa-2x text-dark"></i>
-              <span
-                class="
-                  position-absolute
-                  top-0
-                  start-100
-                  translate-middle
-                  badge
-                  rounded-pill
-                  bg-dark
-                "
-              >
-                99+
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>
-            <ul
-              class="dropdown-menu p-0 dropdown-menu-end"
-              aria-labelledby="dropdownMenuButton1"
-            >
-              <li>
-                <a class="dropdown-item text-white" href="#">
-                  <div
-                    class="
-                      dropDownItemTop
-                      d-flex
-                      align-items-center
-                      justify-content-around
-                    "
-                  >
-                    <p class="m-0 ml-2">Nom de la personne</p>
-                  </div>
-                  <p class="mt-2">"a réagit à un de vos messages"</p>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#">
-                  <div
-                    class="
-                      dropDownItemTop
-                      d-flex
-                      align-items-center
-                      justify-content-around
-                    "
-                  >
-                    <p class="m-0 ml-2">Nom de la personne</p>
-                  </div>
-                  <p class="mt-2">"a réagit à un de vos messages"</p>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#">
-                  <div
-                    class="
-                      dropDownItemTop
-                      d-flex
-                      align-items-center
-                      justify-content-around
-                    "
-                  >
-                    <p class="m-0 ml-2">Nom de la personne</p>
-                  </div>
-                  <p class="mt-2">"a réagit à un de vos messages"</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <a class="nav-link text-dark fw-bold" [routerLink]="['/forum']"
-          >Forum</a
-        >
-        <a class="nav-link text-dark fw-bold" [routerLink]="['/profile']"
-          >Profile</a
-        >
-      </div>
+  <nav class="navbar navbar-expand-md navbar-light bg-warning">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['']">
+        <img
+          class="img-fluid"
+          src="assets/image/logo.png"
+          title="Groupomania"
+          alt="Groupomania"
+        />
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbars"
+        aria-controls="navbars"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse col-4" id="navbars">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0 col-12">
+        <li class="nav-item mt-2 col-6 text-center">
+          <a class="nav-link text-dark fw-bold" [routerLink]="['/forum']"
+            >Forum</a
+          >
+        </li>
+        <li class="nav-item mt-2 col-6 text-center">
+          <a class="nav-link text-dark fw-bold" [routerLink]="['/profile']"
+            >Profile</a
+          >
+        </li>
+      </ul>
     </div>
   </nav>
 </header>
 <main>
-  <div class="creatNewTopic col-12 row justify-content-center">
-    <div class="topicContainer col-8">
-      <h4 class="text-white fw-bold mt-4 row col-12 justify-content-center">
-        Créer votre Topic ici.
+  <div class="cardProfile col-md-7 col-12 mx-auto">
+    <div
+      class="cardProfileTop justify-content-center d-flex align-items-center"
+    >
+      <div class="notification d-flex justify-content-around col-md-6 m-4">
+        <div class="dropdown">
+          <button
+            class="btn dropdown-toggle position-relative text-warning"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="far fa-bell fa-2x text-warning"></i>
+            <span
+              class="
+                position-absolute
+                top-0
+                start-100
+                translate-middle
+                badge
+                rounded-pill
+                bg-warning
+                text-dark
+              "
+            >
+              {{ counter }}
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </button>
+          <ul
+            class="dropdown-menu p-0 dropdown-menu-end bg-dark"
+            aria-labelledby="dropdownMenuButton1"
+          >
+            <li>
+              <a class="dropdown-item text-white" href="#">
+                <div
+                  class="
+                    dropDownItemTop
+                    d-flex
+                    align-items-center
+                    justify-content-around
+                  "
+                >
+                  <p class="m-0 ml-2">{{ reactName }}</p>
+                </div>
+                <p class="mt-2">{{ reactNameTopic }}</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h3 class="text-center mt-2 text-warning">{{ accountName }}</h3>
+      </div>
+    </div>
+    <div class="newPost col-md-12 d-flex justify-content-center">
+      <button
+        type="submit"
+        class="createButtons px-3 btn btn-sm btn-outline-warning fw-bold mb-4"
+        [routerLink]="['/topic']"
+      >
+        Nouveau Message
+      </button>
+    </div>
+  </div>
+  <div class="creatNewTopic d-flex justify-content-center">
+    <div class="topicContainer col-12 col-md-10">
+      <h4 class="text-white fw-bold mt-4 text-center">
+        Créer votre Message ici.
       </h4>
-      <div class="imgPreview mt-4 d-flex justify-content-center">
-        <img src="..." alt="..." />
-      </div>
-      <div class="addImage row col-12 justify-content-center">
-        <button
-          class="addImgButtons px-3 btn btn-sm btn-outline-warning mt-4 col-4"
-          href="#"
-        >
-          Ajouter une image
-        </button>
-      </div>
 
       <div class="mt-3 gap-2">
-        <div class="form-group text-white mt-4">
-          <label for="comment">Votre Poste ici :</label>
-          <textarea class="form-control mt-4" rows="5" id="comment"></textarea>
+        <div class="form-group text-white m-4">
+          <div class="title mt-4">
+            <label for="comment">Le titre de votre message ici :</label>
+            <textarea class="form-control mt-2" rows="1" id="comment">{{
+              newTopicName
+            }}</textarea>
+          </div>
+          <div class="topic mt-4">
+            <label for="comment">Votre Poste ici :</label>
+            <textarea class="form-control mt-2" rows="5" id="comment">{{
+              newTopicContent
+            }}</textarea>
+          </div>
         </div>
-        <div class="post row col-12 justify-content-end">
+        <div class="post d-flex justify-content-end me-4">
           <button
-            class="
-              postButtons
-              px-3
-              btn btn-sm btn-outline-warning
-              mt-4
-              mb-4
-              col-1
-            "
+            class="postButtons px-3 btn btn-sm btn-outline-warning mt-4 mb-4"
             href="#"
           >
             Poster
@@ -141,11 +138,11 @@
   </div>
 </main>
 <footer class="bg-warning text-center text-white">
-  <div class="topFooter container p-4">
+  <div class="topFooter container">
     <section>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+      <div class="row d-flex align-items-center mt-2">
+        <div class="col-12 col-md-3 col-sm-6">
+          <ul class="list-unstyled mt-0">
             <li>
               <a
                 class="text-dark fw-bold text-decoration-none"
@@ -155,8 +152,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-12 col-md-3 col-sm-6">
+          <ul class="list-unstyled">
             <li>
               <a
                 class="text-dark fw-bold text-decoration-none"
@@ -166,8 +163,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-12 col-md-3 col-sm-6">
+          <ul class="list-unstyled">
             <li>
               <a
                 class="text-dark fw-bold text-decoration-none"
@@ -177,8 +174,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <ul class="list-unstyled mb-0">
+        <div class="col-12 col-md-3 col-sm-6">
+          <ul class="list-unstyled">
             <li>
               <a
                 href="mailto:groupomania@oursite.com"
@@ -191,7 +188,6 @@
       </div>
     </section>
   </div>
-
   <div
     class="botFooter text-center p-3 text-dark fw-bold"
     style="background-color: rgba(0, 0, 0, 0.2)"

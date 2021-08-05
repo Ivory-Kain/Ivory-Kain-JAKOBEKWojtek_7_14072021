@@ -6,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topic.component.scss'],
 })
 export class TopicComponent implements OnInit {
+  counter = '1';
+  reactName = '1';
+  reactNameTopic = '1';
   accountName = 'Wojtek Jakobek';
-  counter = 1;
-  reactName = 'Jean-Louis';
-  reactNameTopic = 'Mon premier message';
-  newTopicName = '';
-  newTopicContent = '';
+  newTopicName = '1';
+  newTopicContent = '1';
+
   constructor() {}
 
   ngOnInit(): void {}

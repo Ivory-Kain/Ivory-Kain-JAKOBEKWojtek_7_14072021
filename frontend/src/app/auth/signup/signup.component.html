@@ -37,7 +37,7 @@
 </header>
 <main>
   <div class="logCard col-12 d-flex justify-content-center mt-5">
-    <form [formGroup]="signForm" class="logForm col-md-6 col-10">
+    <form [formGroup]="signupForm" class="logForm col-md-6 col-10">
       <div class="logLogo d-flex justify-content-center">
         <img
           src="../../assets/image/logImage.png"
@@ -91,7 +91,7 @@
 
       <div class="logCardFooter mb-4">
         <button
-          [disabled]="signForm.invalid"
+          [disabled]="signupForm.invalid"
           (click)="onSignup()"
           type="submit"
           class="

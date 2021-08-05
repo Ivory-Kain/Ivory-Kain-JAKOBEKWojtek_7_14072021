@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,17 @@ export class AuthService {
   private authToken: string;
   private userId: string;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  get isLoggedIn() {
+    return this.isAuth$.asObservable();
+  }
+
+  constructor(private http: HttpClient, private router: Router) {
+    const token = localStorage.getItem('token');
+    if (token) {
+      console.log('TOKEN', token);
+      this.setToken(token);
+    }
+  }
 
   createUser(fullName: string, email: string, password: string) {
     return new Promise((resolve, reject) => {
@@ -40,6 +50,12 @@ export class AuthService {
     return this.userId;
   }
 
+  private setToken = (token: string) => {
+    this.authToken = token;
+    localStorage.setItem('token', token);
+    this.isAuth$.next(true);
+  };
+
   loginUser(email: string, password) {
     return new Promise<void>((resolve, reject) => {
       this.http
@@ -50,8 +66,7 @@ export class AuthService {
         .subscribe(
           (response: { userId: string; token: string }) => {
             this.userId = response.userId;
-            this.authToken = response.token;
-            this.isAuth$.next(true);
+            this.setToken(response.token);
             resolve();
           },
           (error) => {
@@ -63,6 +78,7 @@ export class AuthService {
 
   logout() {
     this.authToken = null;
+    localStorage.removeItem('token');
     this.userId = null;
     this.isAuth$.next(false);
     this.router.navigate(['login']);

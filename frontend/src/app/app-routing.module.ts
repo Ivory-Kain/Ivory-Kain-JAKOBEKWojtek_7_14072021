@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { LoginComponent } from './auth/login/login.component';
-import { SignupComponent } from './auth/signup/signup.component';
-import { CguComponent } from './cgu/cgu.component';
-import { CommentsComponent } from './comments/comments.component';
-import { ForumComponent } from './forum/forum.component';
-import { HomeComponent } from './home/home.component';
-import { PolitiqueComponent } from './politique/politique.component';
-import { ProfileComponent } from './profile/profile.component';
-import { TopicComponent } from './topic/topic.component';
+import { AboutComponent } from './pages/about/about.component';
+import { CguComponent } from './pages/cgu/cgu.component';
+import { CommentsComponent } from './pages/comments/comments.component';
+import { ForumComponent } from './pages/forum/forum.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { PolitiqueComponent } from './pages/politique/politique.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { SignupComponent } from './pages/signup/signup.component';
 import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
@@ -18,7 +17,6 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'forum', component: ForumComponent, canActivate: [AuthGuard] },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
-  { path: 'topic', component: TopicComponent, canActivate: [AuthGuard] },
   {
     path: 'comments',
     component: CommentsComponent,

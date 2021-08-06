@@ -60,7 +60,12 @@ exports.login = async (req, res) => {
           return res.sendStatus(401);
         }
         return res.status(200).json({
-          userId: user.id,
+          user: {
+            id: user.id,
+            fullName: user.fullName,
+            email: user.email,
+            role: user.role,
+          },
           token: generateToken(user.id),
         });
       })

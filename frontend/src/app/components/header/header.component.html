@@ -32,9 +32,12 @@
             >Forum</a
           >
         </li>
-        <li class="nav-item col-4 text-center">
-          <a class="nav-link text-dark fw-bold" [routerLink]="['/profile']"
-            >Profile</a
+        <li
+          *ngIf="auth.isAdmin | async as isAdmin"
+          class="nav-item col-4 text-center"
+        >
+          <a class="nav-link text-dark fw-bold" [routerLink]="['/admin']"
+            >Admin</a
           >
         </li>
         <li class="nav-item col-4 text-center">

@@ -28,6 +28,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+// Create a Server
 var server = app.listen(8080, function () {
   let host = server.address().address;
   let port = server.address().port;

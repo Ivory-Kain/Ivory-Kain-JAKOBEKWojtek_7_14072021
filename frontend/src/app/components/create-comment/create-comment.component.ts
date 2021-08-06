@@ -15,6 +15,6 @@ export class CreateCommentComponent implements OnInit {
   ngOnInit(): void {}
 
   onComment(): void {
-    this.postsService.addComment(this.title, this.text);
+    // this.postsService.addComment(this.title, this.text);
   }
 }

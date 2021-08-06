@@ -61,6 +61,7 @@ exports.addComment = async (req, res) => {
   if (!req.body.title || !req.body.text) {
     return res.sendStatus(404);
   }
+
   try {
     const post = await db.post.findOne({
       where: {
@@ -68,7 +69,6 @@ exports.addComment = async (req, res) => {
       },
     });
     console.log("POST", post);
-
     const comment = await post.createComment({
       title: req.body.title,
       text: req.body.text,
@@ -97,6 +97,7 @@ exports.addClap = async (req, res) => {
     res.sendStatus(404);
   }
 };
+
 exports.removePost = async (req, res) => {
   const postId = parseInt(req.params.id);
 

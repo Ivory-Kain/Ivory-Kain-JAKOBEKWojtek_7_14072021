@@ -17,6 +17,7 @@ exports.findAll = async (req, res) => {
 
 exports.delete = async (req, res) => {
   console.log("REQUEST", req);
+
   try {
     const user = await db.user.findOne({
       where: {

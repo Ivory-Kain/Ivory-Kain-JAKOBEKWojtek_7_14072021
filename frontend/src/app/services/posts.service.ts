@@ -33,9 +33,10 @@ export class PostsService {
       });
   }
 
-  addComment(text: string) {
+  addComment(title: string, text: string) {
     this.http
       .post('http://localhost:8080/api/post', {
+        title,
         text,
       })
       .subscribe(() => {

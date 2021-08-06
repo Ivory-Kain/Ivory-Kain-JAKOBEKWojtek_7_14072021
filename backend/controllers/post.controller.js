@@ -50,7 +50,7 @@ exports.addPost = async (req, res) => {
       text: req.body.text,
       userId: parseInt(req.user.id),
     });
-    res.sendStatus(201);
+    res.status(201).json(post.toJSON());
   } catch (err) {
     console.log("ERROR", err);
     res.sendStatus(404);
@@ -72,12 +72,13 @@ exports.addComment = async (req, res) => {
       },
     });
     console.log("POST", post);
-    await post.createComment({
+
+    const comment = await post.createComment({
       title: req.body.title,
       text: req.body.text,
       userId: parseInt(req.user.id),
     });
-    res.sendStatus(201);
+    res.status(201).json(comment.toJSON());
   } catch (err) {
     console.log("ERROR", err);
     res.sendStatus(404);
@@ -95,7 +96,7 @@ exports.addClap = async (req, res) => {
     });
     post.claps = post.claps + 1;
     await post.save();
-    res.sendStatus(201);
+    res.status(201).json(post.toJSON());
   } catch (err) {
     res.sendStatus(404);
   }

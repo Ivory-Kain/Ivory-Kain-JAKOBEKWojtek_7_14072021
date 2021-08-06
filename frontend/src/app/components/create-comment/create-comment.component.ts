@@ -7,6 +7,7 @@ import { PostsService } from 'src/app/services/posts.service';
   styleUrls: ['./create-comment.component.scss'],
 })
 export class CreateCommentComponent implements OnInit {
+  title: string;
   text: string;
 
   constructor(private postsService: PostsService) {}
@@ -14,6 +15,6 @@ export class CreateCommentComponent implements OnInit {
   ngOnInit(): void {}
 
   onComment(): void {
-    this.postsService.addComment(this.text);
+    this.postsService.addComment(this.title, this.text);
   }
 }

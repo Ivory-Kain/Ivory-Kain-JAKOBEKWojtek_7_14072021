@@ -33,6 +33,16 @@ export class PostsService {
       });
   }
 
+  addComment(text: string) {
+    this.http
+      .post('http://localhost:8080/api/post', {
+        text,
+      })
+      .subscribe(() => {
+        this.loadPosts();
+      });
+  }
+
   clap(postId: string) {
     return this.http
       .post(`http://localhost:8080/api/post/${postId}/clap`, undefined)

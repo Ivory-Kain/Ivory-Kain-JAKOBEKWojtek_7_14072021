@@ -18,6 +18,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { PolitiqueComponent } from './pages/politique/politique.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { CreateCommentComponent } from './components/create-comment/create-comment.component';
+import { CommentComponent } from './components/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { SignupComponent } from './pages/signup/signup.component';
     FooterComponent,
     CreatePostComponent,
     PostsComponent,
+    CreateCommentComponent,
+    CommentComponent,
   ],
   imports: [
     BrowserModule,

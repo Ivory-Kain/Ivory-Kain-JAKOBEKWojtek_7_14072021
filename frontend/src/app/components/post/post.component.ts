@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from 'src/app/common-types';
 import { AuthService } from 'src/app/services/auth.service';
 import { PostsService } from 'src/app/services/posts.service';
@@ -19,7 +19,8 @@ export class PostComponent implements OnInit {
   constructor(
     private postsService: PostsService,
     public authService: AuthService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -37,6 +38,17 @@ export class PostComponent implements OnInit {
         segments[0].toString() === 'forum'
           ? this.postsService.loadPosts()
           : this.postsService.loadPost(post.postId || post.id);
+      });
+    });
+  }
+  onDelete(post: Post) {
+    this.postsService.removePost(post.id).subscribe(() => {
+      this.route.url.subscribe((segments) => {
+        segments[0].toString() === 'forum'
+          ? this.postsService.loadPosts()
+          : post.postId
+          ? this.postsService.loadPost(post.postId)
+          : this.router.navigate(['/forum']);
       });
     });
   }

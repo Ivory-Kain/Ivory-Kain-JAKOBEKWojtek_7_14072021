@@ -52,6 +52,9 @@ export class PostsService {
         this.loadPosts();
       });
   }
+  removePost(postId: string) {
+    return this.http.delete(`http://localhost:8080/api/post/${postId}`);
+  }
 
   addComment(postId: string, title: string, text: string) {
     this.http

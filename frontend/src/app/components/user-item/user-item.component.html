@@ -1,8 +1,13 @@
-<div *ngIf="user" class="d-flex flex-row justify-content-between">
-  <p>{{ user.id }}</p>
-  <p>{{ user.fullName }}</p>
-  <p>{{ user.email }}</p>
-  <p>{{ user.role === 1 ? "Admin" : "User" }}</p>
-  <p>{{ user.createdAt }}</p>
-  <button class="btn-danger" (click)="onDelete(user.id)">Supprimer</button>
+<div class="backgroundImage"></div>
+<div *ngIf="user" class="d-flex flex-row col-12">
+  <p class="col-1 text-white text-center m-0 gap-0">{{ user.id }}</p>
+  <p class="col-4 text-white text-center m-0 gap-0">{{ user.fullName }}</p>
+  <p class="col-4 text-white text-center m-0 gap-0">{{ user.email }}</p>
+  <p class="col-2 text-white text-center m-0 gap-0">
+    {{ user.role === 1 ? "Admin" : "User" }}
+  </p>
+
+  <button class="btn-danger col-1" (click)="onDelete(user.id)">
+    <i class="far fa-times-circle"></i>
+  </button>
 </div>

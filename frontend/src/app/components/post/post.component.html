@@ -18,6 +18,7 @@
             type="button"
             class="btn px-3 btn-sm btn-outline-danger m-2"
             *ngIf="showDeleteButton"
+            (click)="onDelete(post)"
           >
             Supprimer
           </button>

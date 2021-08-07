@@ -8,6 +8,8 @@
         <div class="title mt-4">
           <label for="title">Titre</label>
           <textarea
+            maxlength="50"
+            placeholder="50 caractères Maximum"
             class="form-control mt-2"
             rows="1"
             id="title"
@@ -17,8 +19,10 @@
         <div class="topic mt-4">
           <label for="text">Message</label>
           <textarea
+            maxlength="250"
+            placeholder="250 caractères Maximum"
             class="form-control mt-2"
-            rows="5"
+            rows="2"
             id="text"
             [(ngModel)]="text"
           ></textarea>
@@ -27,8 +31,8 @@
       <div class="post d-flex justify-content-end me-4">
         <button
           class="postButtons px-3 btn btn-sm btn-outline-warning mt-4 mb-4"
-          href="#"
           (click)="onPost()"
+          (click)="handelClear()"
         >
           Créer
         </button>

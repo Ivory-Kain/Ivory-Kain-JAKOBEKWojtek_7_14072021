@@ -10,6 +10,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  errorMsg: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -33,6 +34,7 @@ export class LoginComponent implements OnInit {
       })
       .catch((error) => {
         console.log(error);
+        this.errorMsg = error.message;
       });
   }
 }

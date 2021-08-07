@@ -27,4 +27,8 @@ export class CreatePostComponent implements OnInit {
       this.postsService.addPost(this.title, this.text);
     }
   }
+  handelClear() {
+    this.title = '';
+    this.text = '';
+  }
 }

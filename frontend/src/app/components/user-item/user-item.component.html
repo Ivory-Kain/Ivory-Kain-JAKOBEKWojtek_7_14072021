@@ -1,8 +1,9 @@
 <div class="backgroundImage"></div>
+
 <div *ngIf="user" class="d-flex flex-row col-12">
-  <p class="col-1 text-white text-center m-0 gap-0">{{ user.id }}</p>
+  <p class="col-2 text-white text-center m-0 gap-0">ID : {{ user.id }}</p>
   <p class="col-4 text-white text-center m-0 gap-0">{{ user.fullName }}</p>
-  <p class="col-4 text-white text-center m-0 gap-0">{{ user.email }}</p>
+  <p class="col-3 text-white text-center m-0 gap-0">{{ user.email }}</p>
   <p class="col-2 text-white text-center m-0 gap-0">
     {{ user.role === 1 ? "Admin" : "User" }}
   </p>

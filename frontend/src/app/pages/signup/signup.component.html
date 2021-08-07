@@ -57,7 +57,7 @@
         <button
           [disabled]="signupForm.invalid"
           (click)="onSignup()"
-          type="submit"
+          type="button"
           class="
             btn btn-warning
             m-3
@@ -71,6 +71,7 @@
         >
           S'enregistrer
         </button>
+        <p class="text-danger ms-4" *ngIf="errorMsg">{{ errorMsg }}</p>
       </div>
     </form>
   </div>

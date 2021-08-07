@@ -36,7 +36,7 @@ exports.delete = async (req, res) => {
 
     // Soft delete the user
     user.email = null;
-    user.fullName = "Account deleted";
+    user.fullName = "Compte supprimé";
     user.password = null;
     user.role = 0;
     await user.save();

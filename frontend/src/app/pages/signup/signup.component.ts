@@ -10,6 +10,7 @@ import { ConfirmedValidator } from '../../services/confirmed.validator';
 })
 export class SignupComponent implements OnInit {
   signupForm: FormGroup;
+  errorMsg: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -44,12 +45,12 @@ export class SignupComponent implements OnInit {
           })
           .catch((error) => {
             console.error(error);
-            // this.errorMsg = error.message;
+            this.errorMsg = error.message;
           });
       })
       .catch((error) => {
         console.error(error);
-        // this.errorMsg = error.message;
+        this.errorMsg = error.message;
       });
   }
 }

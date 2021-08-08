@@ -26,7 +26,7 @@ export class ForumComponent implements OnInit {
     this.postsService.getPosts().subscribe((posts) => {
       this.posts = posts;
     });
-    // On initialise la liste en appelant une première fois la MAJ
+    // Init List
     this.postsService.loadPosts();
   }
 }
